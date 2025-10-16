@@ -59,3 +59,6 @@ A query retorna as 10 marcas com maior venda líquida no mês de julho de 2019, 
 
 Este exercício reforçou minha capacidade de transformar dados brutos em informações estratégicas para tomada de decisão.
 
+
+![Desafio 1](problema1.png)
+
