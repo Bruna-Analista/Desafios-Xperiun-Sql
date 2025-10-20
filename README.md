@@ -46,19 +46,6 @@ limit 10
 
 ---
 
-## Resultado Esperado
-A query retorna as 10 marcas com maior venda líquida no mês de julho de 2019, permitindo ao supervisor de vendas tomar decisões rápidas e informadas.
-
----
-
-## ✨ Aprendizados
-- Prática de JOINs múltiplos para combinar tabelas diferentes.
-- Cálculo de métricas financeiras simples (venda líquida).
-- Filtragem e ordenação de dados para análises rápidas.
-- Documentação do processo de pensamento, facilitando a leitura por outras pessoas ou equipes.
-
-Este exercício reforçou minha capacidade de transformar dados brutos em informações estratégicas para tomada de decisão.
-
 
 ![Desafio 1](problema1.png)
 
@@ -105,15 +92,6 @@ group by v.nome
 
 ---
 
-## Resultado Esperado
-O relatório destaca os vendedores que mais aplicam descontos, permitindo entender o impacto nas margens de lucro.
-
----
-
-## ✨ Aprendizados
-- Cálculo de percentuais derivados de agregações
-- Aplicação de filtros de período
-- Interpretação de resultados para gestão de desempenho comercial
 
 ![Desafio 2](problema2.png)
 
