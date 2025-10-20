@@ -1,4 +1,4 @@
-# 🚀 Desafio SQL Xperiun - Workshop SQL
+#  🚀 Desafio SQL Xperiun - Workshop SQL
 
 ## 📊 Contexto
 Este projeto faz parte do desafio SQL da plataforma Xperiun. 
