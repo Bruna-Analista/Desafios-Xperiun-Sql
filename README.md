@@ -62,3 +62,60 @@ Este exercício reforçou minha capacidade de transformar dados brutos em inform
 
 ![Desafio 1](problema1.png)
 
+
+## 🧩 Problema 2 — Vendedores que Concedem Mais Descontos (Jan–Nov/2019)
+
+O diretor percebeu que o lucro está diminuindo e pediu um relatório com:
+- Nome do vendedor
+- Total bruto vendido
+- Percentual de desconto
+- Venda líquida
+- Tudo referente ao período de janeiro a novembro de 2019.
+  
+---
+
+## 💡 Estratégia de Resolução
+1. Relacionei as tabelas de Vendas e Vendedores usando **JOIN**.
+2. Calculei o total bruto e o total de desconto por vendedor.
+3. Calculei o percentual de desconto aplicado.
+4. Exibi o total líquido após descontos, ordenando do maior para o menor volume de vendas
+
+
+---
+
+## 🖥 Query SQL
+```sql
+ 
+select
+v.nome as nome ,
+round(sum (ve.VendaBruta), 2) as VendaBruta,
+case
+    when sum (ve.Desconto) = 0
+    then 0
+    else sum (ve.Desconto) / sum(ve.VendaBruta) 
+end  as PercDesconto,
+round (sum (ve.VendaBruta - ve.Desconto) , 2) as VendaLiquida
+from Vendedores v
+join vendas ve
+on v.Vendedor = ve.Vendedor
+where ve.movimento between '2019-01-01' and '2019-11-30'
+group by v.nome
+
+```
+
+---
+
+## Resultado Esperado
+O relatório destaca os vendedores que mais aplicam descontos, permitindo entender o impacto nas margens de lucro.
+
+---
+
+## ✨ Aprendizados
+- Cálculo de percentuais derivados de agregações
+- Aplicação de filtros de período
+- Interpretação de resultados para gestão de desempenho comercial
+
+![Desafio 2](problema2.png)
+
+
+
