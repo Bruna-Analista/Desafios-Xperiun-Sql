@@ -55,7 +55,7 @@ limit 10
 O diretor percebeu que o lucro está diminuindo e pediu um relatório com:
 - Nome do vendedor
 - Total bruto vendido
-- Percentual de desconto
+- Percentual de desconto 
 - Venda líquida
 - Tudo referente ao período de janeiro a novembro de 2019.
   
