@@ -96,4 +96,49 @@ group by v.nome
 ![Desafio 2](problema2.png)
 
 
+## 🧩 Problema 3 — Relatório de Produtos Inativos
+
+Com a reativação de produtos, foi solicitado um relatório contendo:
+- Descrição do Produto
+- Descrição do Grupo de Produto
+- Descrição do Subgrupo de Produto
+- Descrição da Marca
+
+  
+---
+
+## 💡 Estratégia de Resolução
+1. Combinei as tabelas de Produtos, Grupos, Subgrupos e Marcas.
+2. Apliquei LEFT JOINs para manter os produtos sem marca ou subgrupo.
+3. Filtrei apenas os produtos inativos.
+
+
+---
+
+## 🖥 Query SQL
+```sql
+ 
+SELECT
+    p.Descricao AS Descricao,
+    g.Descricao AS GrupoProduto,
+    s.Descricao AS SubgrupoProduto,
+    m.Descricao AS Marca
+FROM produtos p
+JOIN GruposProdutos g
+    ON p.GrupoProduto = g.GrupoProduto
+LEFT JOIN SubgruposProdutos s
+    ON p.SubgrupoProduto = s.SubgrupoProduto
+LEFT JOIN Marcas m
+    ON p.Marca = m.Marca
+WHERE p.Ativo <> 1
+
+```
+
+---
+
+
+![Desafio 3](problema3.png)
+
+
+
 
